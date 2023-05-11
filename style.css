@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+:root {
+    --headFootHeight: 50px;
+    --bg-color: rgb(65, 65, 65);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+    width: 100vw;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    height: var(--headFootHeight);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    margin: auto 20px;
+    justify-self: flex-start;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin: 10px 30px;
+    color: white;
+    font-size: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+header ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+main {
+    width: 100vw;
+    min-height: calc(100vh - (2 * var(--headFootHeight)));
+}
+
+.intro {
+    height: min-content;
+    padding: 20px 15px;
+    border-bottom: 1px dotted blue; 
+    background: linear-gradient(45deg, #bba8e0, #8ddfea);
+    border-radius: 12;
+    margin: 10px 0;
+    border-radius: 20px ;
+}
+
+.name {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+}
+
+.description {
+    align-items: center;
+    justify-content: center;
+    margin: 20px 5px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.skills {
+    width: 100vw;
+}
+
+
+.gridHead {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.skillCards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.skillCard {
+    height: 100px;
+    min-width: 250px;
+    max-width: 250px;
+    border: 1px dotted blue;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    transition: all 1s ease-out;
+}
+
+.skillCard:hover,
+.skillCard:focus {
+  background-color: #8ff8f3;
+  color: #333;
+}
+
+.skillCard .head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.skill {
+    font-size: 20px;
+    margin: 0 30px;
+    font-weight: 600;
+}
+
+.skillCard .foot {
+    padding: 10px 0 5px 0;
+}
+
+.skillPercentage {
+    text-align: center;
+    color: rgb(92, 17, 149);
+    font-size: 20px;
+}
+
+.skillImg {
+    width: 40px;
+    height: 40px;
+}
+
+.projects {
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+
+.projectCards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.projectCard {
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 10px;
+    width: 220px;
+    margin: 20px;
+}
+
+.projectCard .project {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.projectCard ul {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.projectCard ul li {
+    font-size: 10px;
+    list-style: none;
+    color: #333;
+}
+
+.projectCard a {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(40, 129, 207);
+}
+
+footer {
+    height: var(--headFootHeight);
+    background-color: var(--bg-color);
+}
+
+.contact {
+    height: 100%;
+}
+
+.contact ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    color: white;
+    column-gap: 30px;
+}
+.contact ul li {
+    padding: auto 20px;
+}
+
+.contact ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.contact ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* responsive css for tablet devices */
+
+@media screen and (max-width:780px) {
+    .intro {
+        padding: 10px 8px;
+        margin: 6px 0;
+        border-radius: 15px;
+    }
+    
+    .name {
+        margin: 8px auto;
+        font-size: 25px;
+    }
+    
+    .description {
+        margin: 10px 2px;
+        font-size: 15px;
+    }
+
+    
+    .gridHead {
+        font-size: 22px;
+        margin: 12px 0;
+    }
+
+    .skillCards {
+        grid-template-columns: auto auto;
+    }
+
+    .skillCard {
+        border-radius: 20px;
+        padding: 10px;
+        margin: 8px;
+        height: 80px;
+    }
+
+    .skillCard .head {
+        padding-bottom: 7px;
+    }
+
+    .skill {
+        font-size: 12px;
+        margin: 0 20px;
+    }
+
+    .skillPercentage {
+        font-size: 10px;
+    }
+
+    .skillImg {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .projects {
+        margin: 10px 0;
+    }
+
+    .projectCards {
+        grid-template-columns: auto auto;
+    }
+
+    .projectCard {
+        padding: 8px;
+    }
+
+    .projectCard .project {
+        font-size: 15px;
+    }
+
+    .projectCard ul {
+        margin: 7px 0;
+    }
+
+    .projectCard ul li {
+        font-size: 7px;
+    }
+
+    .contact ul {
+        column-gap: 20px;
+    }
+    .contact ul li {
+        padding: auto 15px;
+    }
+
+    .contact ul li a {
+        font-size: 15px;
+    }
+
+}
+
+
+/* responsive css for mobile devices */
+
+@media screen and (max-width:400px) {
+
+    .logo {
+        margin: auto 10px;
+        justify-self: flex-start;
+    }
+    
+    header ul li {
+        list-style: none;
+        margin: 5px 10px;
+        color: white;
+        font-size: 10px;
+    }
+
+
+    .intro {
+        padding: 7px 5px;
+        margin: 4px 0;
+    }
+    
+    .name {
+        margin: 6px auto;
+        font-size: 15px;
+    }
+    
+    .description {
+        margin: 7px 1px;
+        font-size: 10px;
+    }
+
+    
+    .gridHead {
+        font-size: 15px;
+        margin: 12px 0;
+    }
+
+    .skillCards {
+        grid-template-columns: auto;
+    }
+
+    .skillCard {
+        margin: 5px;
+        height: 65px;
+    }
+
+    .skillPercentage {
+        font-size: 12px;
+    }
+
+    .projects {
+        margin: 10px 0;
+    }
+
+    .projectCards {
+        grid-template-columns: auto;
+    }
+
+    .contact ul {
+        column-gap: 20px;
+    }
+    .contact ul li {
+        padding: auto 15px;
+    }
+
+    .contact ul li a {
+        font-size: 15px;
+    }
+
+}
