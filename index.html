@@ -24,7 +24,27 @@
           <a href="#contact"> Contact  </a>
          </li>
       </ul>
+
+      <button class="sidebarButton" type="button" id="sidebarButton">
+        <img src="./assets/menu.png" width="30px" alt="sidebarlogo">
+      </button>
     </header>
+    <div class="collapse" id="collapse">
+      <ul>
+        <li>
+          <a href="#about"> About </a></li>
+        <li>
+          <a href="#skills"> Skills </a>
+        </li>
+        <li>
+          <a href="#projects"> Projects </a>
+        </li>
+        <li>
+          <a href="#contact"> Contact  </a>
+         </li>
+      </ul>
+    </div>
+
     <main>
       <div class="intro" id="about">
         <p class="name">Hey <strong> Neeraj Nanvani </strong> this side</p>
@@ -208,4 +228,16 @@
 
     </footer>
   </body>
+
+  <script>
+    let button = document.getElementById('sidebarButton');
+
+    const collapse = document.getElementById('collapse');
+
+    button.addEventListener('click', () => {
+      console.log("hell")
+      // collapse.style.display = 'none'
+      collapse.classList.toggle('collape-active')
+    })
+  </script>
 </html>

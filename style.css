@@ -13,14 +13,16 @@
 
 
 header {
-    width: 100vw;
+    width: 100%;
     background-color: var(--bg-color);
     display: flex;
     flex-direction: row;
     height: var(--headFootHeight);
     position: sticky;
     top: 0;
+    justify-content: space-between;
 }
+
 
 .logo {
     margin: auto 20px;
@@ -52,7 +54,7 @@ header ul li:hover {
 }
 
 main {
-    width: 100vw;
+    width: 100%;
     min-height: calc(100vh - (2 * var(--headFootHeight)));
 }
 
@@ -83,7 +85,7 @@ main {
 }
 
 .skills {
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -95,14 +97,13 @@ main {
 
 .skillCards {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     justify-content: center;
 }
 
 .skillCard {
     height: 100px;
-    min-width: 250px;
-    max-width: 250px;
+    width: 25vw;
     border: 1px dotted blue;
     border-radius: 20px;
     padding: 10px;
@@ -233,10 +234,52 @@ footer {
     text-decoration: underline;
 }
 
+.sidebarButton {
+    display: none;
+}
+
+.collapse {
+    display: none;
+ }
 
 /* responsive css for tablet devices */
 
 @media screen and (max-width:780px) {
+
+    header ul {
+        display: none;
+    }
+    .sidebarButton {
+        display: block;
+    }
+    
+    .collape-active {
+        height: min-content;
+        width: 100%;
+        background-color: var(--bg-color);
+        display: flex;
+        color: white;
+        justify-content: center;
+        position: sticky; 
+        top: var(--headFootHeight);
+    }
+
+    .collapse ul li {
+        list-style: none;
+        margin: 4px 10px;
+    }
+
+    .collapse ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .collapse ul li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
     .intro {
         padding: 10px 8px;
         margin: 6px 0;
@@ -268,6 +311,7 @@ footer {
         padding: 10px;
         margin: 8px;
         height: 80px;
+        width: 40vw;
     }
 
     .skillCard .head {
@@ -275,12 +319,12 @@ footer {
     }
 
     .skill {
-        font-size: 12px;
+        font-size: 15px;
         margin: 0 20px;
     }
 
     .skillPercentage {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .skillImg {
@@ -372,6 +416,7 @@ footer {
     .skillCard {
         margin: 5px;
         height: 65px;
+        width: 80vw;
     }
 
     .skillPercentage {
