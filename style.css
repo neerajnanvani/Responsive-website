@@ -168,7 +168,7 @@ main {
     border: 1px solid green;
     padding: 10px;
     border-radius: 10px;
-    width: 220px;
+    width: 25vw;
     margin: 20px;
 }
 
@@ -343,6 +343,7 @@ footer {
 
     .projectCard {
         padding: 8px;
+        width: 30vw;
     }
 
     .projectCard .project {
@@ -431,6 +432,9 @@ footer {
         grid-template-columns: auto;
     }
 
+    .projectCard {
+        width: 80vw;
+    }
     .contact ul {
         column-gap: 20px;
     }
